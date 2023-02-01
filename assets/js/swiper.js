@@ -6,7 +6,7 @@ const swiper = new Swiper("#swiper", {
     centeredSlides: true,
     loop: true,
     loopAdditionalSlides: 5,
-    slidesPerView: 1.5,
+    slidesPerView: 1.9,
     spaceBetween: 0,
     pagination: {
         el: "#variations",

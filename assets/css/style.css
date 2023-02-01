@@ -144,7 +144,12 @@ table {
 
 body {
     font-size: 16px;
-    background-color: #ccc;
+    background-color: rgba(228, 77, 38, .8);
+    background-color: rgba(255, 255, 255, .8);
+    background-color: rgba(38, 77, 228, .8);
+    background-color: rgba(70, 67, 66, .8);
+    background-color: rgba(247, 223, 30, .8);
+
 }
 
 .wrapper {
@@ -164,8 +169,7 @@ img {
 }
 
 section {
-    background-color: aqua;
-    margin-bottom: 100px;
+    padding: 5px 20px;
 }
 
 .tag-1 {
@@ -173,82 +177,346 @@ section {
     color: #FFFF;
 }
 
+.h2-title,
+.h3-title,
+.h4-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.h2-tag {
+    color: #FFFF;
+    font-size: 1.75rem
+}
+
+.h2-text {
+    padding: 0 10px;
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+.h3-tag,
+.img-tag {
+    font-size: 1.25rem;
+    color: #FFFF;
+}
+
+.h3-text {
+    padding: 0 10px;
+    font-size: 1.25rem;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+.p-tag,
+.a-tag {
+    color: #FFFF;
+}
+
+.p-text {
+    line-height: 27px;
+    padding-left: 30px;
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.div-tag {
+    font-size: 1.5rem;
+    color: #FFFF;
+}
+
+.a-tag {
+    display: flex;
+}
+
+.a-text {
+    padding: 0 10px;
+    color: #000000;
+    font-size: 1.125rem;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+.section-tag-bottom {
+    margin-top: auto;
+    margin-bottom: 0;
+}
+
 /*------------------- ヘッダーＰＣサイズ -----------------------*/
 
 header {
-    /* position: relative; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     height: 700px;
-    padding: 10px 40px;
+    padding: 10px 20px;
 }
 
 .title {
-    /* position: absolute; */
-    max-width: 1000px;
     display: flex;
     font-size: 3rem;
     justify-content: center;
     align-items: center;
     color: #FFFF;
-    margin: auto 20px;
     margin: auto;
-    /* width: fit-content; */
-    /* margin: 0 auto; */
-    flex-shrink: 0;
 }
 
 .title_h1_text {
-    /* flex: 0; */
-    text-align: center;
     display: flex;
-    flex-wrap: wrap;
-    /* justify-content: center; */
-    width: fit-content;
-    /* max-width: fit-content; */
     color: #000;
-    padding: 0 20px;
+    padding: 0 10px;
     font-weight: bold;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
 }
 
 .title_h1_text span {
-    /* flex-grow: 1; */
-    /* display: inline-block; */
-    min-width: 310px;
     width: fit-content;
     padding: 0 10px;
-    margin: 0;
+    margin: 0 auto;
 }
 
 .title_h1_tag {
-    display: inline;
     font-size: 2.5rem;
+
+}
+
+@media screen and (max-width: 900px) {
+    .title_h1_text {
+        display: block;
+    }
+
+    .title_h1_text span:first-child {
+        margin-bottom: 10px;
+    }
+}
+
+/*------------------- メインＰＣサイズ -----------------------*/
+
+main {
+    padding: 0 20px;
+}
+
+.main-close {
+    margin: 5px 0;
+}
+
+/*------------------- 自己紹介ＰＣサイズ -----------------------*/
+
+.section-self-introduction {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding: 10px 20px 5px;
+    height: 700px;
+}
+
+.self-introduction-box {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 40px;
 }
 
 /*------------------- 対応可能言語・スキルＰＣサイズ -----------------------*/
+
+.section-language {
+    display: flex;
+    flex-direction: column;
+    height: 1000px;
+}
+
+.language-element-box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
+}
+
+.section-language .h2-title {
+    margin-top: 60px;
+}
+
+.swiper-box {
+    position: relative;
+    width: 100%;
+    max-width: 832px;
+    margin: 0 auto;
+}
+
+.div-tag,
+.div-tag-bottom {
+    position: absolute;
+    top: -22px;
+
+}
+
+.div-tag-bottom {
+    top: auto;
+    bottom: 19px;
+}
 
 .swiper-container-parent {
     position: relative;
     display: flex;
     align-items: center;
-    max-width: 1000px;
+    width: 100%;
+    max-height: 400px;
+    max-width: 720px;
+    aspect-ratio: 700/400;
+    padding-bottom: 46px;
     margin: 0 auto;
 }
 
 #swiper {
-    height: 400px;
+    max-height: 400px;
 }
 
 .variations_img {
-    margin: 0 auto;
-    width: 200px;
-    height: 200px;
-    /* padding: 20px 0; */
+    width: 100%;
+    max-width: 320px;
+    padding: 20px;
+    aspect-ratio: 1/1;
+    margin: auto;
 }
 
-.swiper-pagination_variations {
+.variations_img img {
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.6));
+}
+
+.swiper-container-parent .swiper-pagination_variations {
     position: absolute;
+    width: 255px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -20px;
     z-index: 10;
+}
+
+.section-language .swiper-container-parent .swiper-pagination-bullet {
+    width: 35px;
+    height: 35px;
+    margin: 0 8px;
+    transition: all .5s;
+    filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.3)) drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.6));
+}
+
+.swiper-pagination-bullet:nth-child(1) {
+    background-color: #E44D26;
+    opacity: 1;
+}
+
+.swiper-pagination-bullet:nth-child(2) {
+    background-color: #264DE4;
+    opacity: 1;
+}
+
+.swiper-pagination-bullet:nth-child(3) {
+    background-color: #F7DF1E;
+    opacity: 1;
+}
+
+.swiper-pagination-bullet:nth-child(4) {
+    background-color: #464342;
+    opacity: 1;
+}
+
+.swiper-pagination-bullet:nth-child(5) {
+    background-color: #FFFFFF;
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+    transform: scale(1.2);
+    transition: all .5s;
+}
+
+.tag-button,
+.tag-button2 {
+    position: absolute;
+    left: calc(50% + -231px);
+    bottom: -10px;
+    font-size: 1.25rem;
+    color: #FFFF;
+}
+
+.tag-button2 {
+    left: calc(50% + 133px);
+
+}
+
+.swiper-img-text {
+    bottom: 0;
+    font-size: 1.5rem;
+    padding-top: 10px;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+.swiper-3d .swiper-slide-shadow-left,
+.swiper-3d .swiper-slide-shadow-right {
+    border-radius: 20px;
+}
+
+/*------------------- サンプルサイトＰＣサイズ -----------------------*/
+
+.section-website-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 60px 0;
+}
+
+.website-container {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    max-width: 1000px;
+    margin: 60px auto 0;
+}
+
+.website-box {
+    margin-bottom: 40px;
+}
+
+.website-box-img {
+    width: 100%;
+    max-width: 400px;
+    aspect-ratio: 400/200;
+    margin: 5px 0 10px;
+    box-shadow: 0px 3px 3px 0px #000000;
+}
+
+.website-box-wrapper:first-child {
+    margin-right: 20px;
+}
+
+/*------------------- 対応可能時間ＰＣサイズ -----------------------*/
+
+.schedule-inner {
+    margin: 60px 0;
+}
+
+.schedule-box {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.li-container {
+    padding: 5px 0;
+    padding-left: 20px;
+}
+
+/*------------------- フッターＰＣサイズ -----------------------*/
+
+footer {
+    padding: 5px 20px 10px;
+}
+
+.footer-text-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px auto;
 }
