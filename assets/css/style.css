@@ -144,12 +144,55 @@ table {
 
 body {
     font-size: 16px;
-    background-color: rgba(228, 77, 38, .8);
-    background-color: rgba(255, 255, 255, .8);
-    background-color: rgba(38, 77, 228, .8);
-    background-color: rgba(70, 67, 66, .8);
-    background-color: rgba(247, 223, 30, .8);
+    /* background-color: rgba(228, 77, 38, .8); */
+    /* background-color: rgba(255, 255, 255, .8); */
+    /* background-color: rgba(38, 77, 228, .8); */
+    /* background-color: rgba(247, 223, 30, .8); */
+    transition: all .5s;
+}
 
+body.html-active {
+    background-color: rgba(228, 77, 38, .8);
+    transition: all .5s;
+}
+
+#html_title,
+#css_title,
+#javascript_title,
+#wordpress_title,
+#github_title {
+    transition: all .3s;
+}
+
+#html_title.active,
+#css_title.active,
+#javascript_title.active,
+#wordpress_title.active,
+#github_title.active {
+    transform: translateY(-3px) scale(1.1);
+    font-weight: bold;
+    transition: all .3s;
+    padding: 0 5px;
+}
+
+body.css-active {
+    background-color: rgba(38, 77, 228, .8);
+    transition: all .5s;
+}
+
+body.javascript-active {
+    background-color: rgba(247, 223, 30, .8);
+    transition: all .5s;
+}
+
+body.wordpress-active {
+    background-color: rgba(70, 67, 66, .8);
+    transition: all .5s;
+}
+
+body.github-active {
+    background-color: rgba(255, 255, 255, .8);
+    transition: all .5s;
 }
 
 .wrapper {
@@ -205,6 +248,7 @@ section {
 }
 
 .h3-text {
+    display: flex;
     padding: 0 10px;
     font-size: 1.25rem;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);

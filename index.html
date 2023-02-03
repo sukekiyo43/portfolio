@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
-<body>
+<body id="body">
     <div class="wrapper">
         <span class="tag-1">&lt;body&gt;</span>
         <header>
@@ -73,7 +73,13 @@
                     </h2>
                     <h3 class="h3-title">
                         <span class="h3-tag">&lt;h3&gt;</span>
-                        <span class="h3-text">HTML･CSS･JavaScript･WordPress･GitHub</span>
+                        <span class="h3-text">
+                            <span id="html_title" class="active">HTML</span>･
+                            <span id="css_title">CSS</span>･
+                            <span id="javascript_title">JavaScript</span>･
+                            <span id="wordpress_title">WordPress</span>･
+                            <span id="github_title">GitHub</span>
+                        </span>
                         <span class="h3-tag">&lt;/h3&gt;</span>
                     </h3>
                     <div class="swiper-box">
@@ -81,31 +87,31 @@
                         <div class="swiper-container-parent" data-aos="">
                             <div id="swiper" class="swiper">
                                 <div class="swiper-wrapper">
-                                    <div class="variations_img_box swiper-slide">
+                                    <div id="html" class="variations_img_box swiper-slide">
                                         <div class="variations_img">
                                             <img src="./assets/img/html.svg" alt="HTMLのロゴ画像">
                                             <div class="swiper-img-text">HTML</div>
                                         </div>
                                     </div>
-                                    <div class="variations_img_box swiper-slide">
+                                    <div id="css" class="variations_img_box swiper-slide">
                                         <div class="variations_img">
                                             <img src="./assets/img/css.svg" alt="CSSのロゴ画像">
                                             <div class="swiper-img-text">CSS</div>
                                         </div>
                                     </div>
-                                    <div class="variations_img_box swiper-slide">
+                                    <div id="javascript" class="variations_img_box swiper-slide">
                                         <div class="variations_img">
                                             <img src="./assets/img/javascript.svg" alt="JavaScriptのロゴ画像">
                                             <div class="swiper-img-text">JavaScript</div>
                                         </div>
                                     </div>
-                                    <div class="variations_img_box swiper-slide">
+                                    <div id="wordpress" class="variations_img_box swiper-slide">
                                         <div class="variations_img">
                                             <img src="./assets/img/wordpress.svg" alt="WordPressのロゴ画像">
                                             <div class="swiper-img-text">WordPress</div>
                                         </div>
                                     </div>
-                                    <div class="variations_img_box swiper-slide">
+                                    <div id="github" class="variations_img_box swiper-slide">
                                         <div class="variations_img">
                                             <img src="./assets/img/github.svg" alt="GitHubのロゴ画像">
                                             <div class="swiper-img-text">GitHub</div>
