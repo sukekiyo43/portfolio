@@ -142,18 +142,103 @@ table {
 
 /*------------------- 全体の設定 -----------------------*/
 
-body {
+#body0.open {
+
+    overflow: hidden;
+}
+
+#body {
+    position: relative;
+    width: 100vw;
     font-size: 16px;
-    /* background-color: rgba(228, 77, 38, .8); */
-    /* background-color: rgba(255, 255, 255, .8); */
-    /* background-color: rgba(38, 77, 228, .8); */
-    /* background-color: rgba(247, 223, 30, .8); */
+    font-family: 'メイリオ', ' Meiryo', sans-serif;
+    opacity: 0;
+    animation: fadein .5s linear forwards;
+    background-color: rgba(228, 77, 38, .8);
+}
+
+
+@keyframes fadein {
+    100% {
+        opacity: 1;
+    }
+}
+
+#body.active {
     transition: all .5s;
 }
 
-body.html-active {
-    background-color: rgba(228, 77, 38, .8);
-    transition: all .5s;
+#body.css-active {
+    background-color: rgba(38, 77, 228, .8);
+}
+
+#body.javascript-active {
+    background-color: rgba(247, 223, 30, .8);
+}
+
+#body.wordpress-active {
+    background-color: rgba(70, 67, 66, .8);
+}
+
+#body.github-active {
+    background-color: rgba(255, 255, 255, .8);
+}
+
+#bg1 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-repeat: repeat;
+    background-image: url(../img/background-pc1.svg);
+    animation: loop 30s linear infinite;
+    opacity: .4;
+    z-index: -1;
+}
+
+@keyframes loop {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 0 1490px;
+    }
+}
+
+#bg2 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-repeat: repeat;
+    background-image: url(../img/background-pc2.svg);
+    animation: bgiLoop2 50s linear infinite;
+    opacity: .4;
+    z-index: -1;
+}
+
+@keyframes bgiLoop2 {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 0 1490px;
+    }
+}
+
+#bg1.active,
+#bg2.active {
+    opacity: .7;
+}
+
+#bg1.active-g {
+    background-image: url(../img/background-pc1-github.svg);
+    opacity: .5;
+}
+
+#bg2.active-g {
+    background-image: url(../img/background-pc2-github.svg);
+    opacity: .5;
 }
 
 #html_title,
@@ -161,7 +246,7 @@ body.html-active {
 #javascript_title,
 #wordpress_title,
 #github_title {
-    transition: all .3s;
+    transition: all .3s 0s ease;
 }
 
 #html_title.active,
@@ -169,30 +254,10 @@ body.html-active {
 #javascript_title.active,
 #wordpress_title.active,
 #github_title.active {
-    transform: translateY(-3px) scale(1.1);
+    transform: translateZ(0) translateY(-3px) scale(1.1);
     font-weight: bold;
-    transition: all .3s;
+    transition: all .3s 0s ease;
     padding: 0 5px;
-}
-
-body.css-active {
-    background-color: rgba(38, 77, 228, .8);
-    transition: all .5s;
-}
-
-body.javascript-active {
-    background-color: rgba(247, 223, 30, .8);
-    transition: all .5s;
-}
-
-body.wordpress-active {
-    background-color: rgba(70, 67, 66, .8);
-    transition: all .5s;
-}
-
-body.github-active {
-    background-color: rgba(255, 255, 255, .8);
-    transition: all .5s;
 }
 
 .wrapper {
@@ -217,7 +282,8 @@ section {
 
 .tag-1 {
     font-size: 2rem;
-    color: #FFFF;
+    color: #FFFFFF;
+    transition: all .5s;
 }
 
 .h2-title,
@@ -230,8 +296,9 @@ section {
 }
 
 .h2-tag {
-    color: #FFFF;
-    font-size: 1.75rem
+    color: #FFFFFF;
+    font-size: 1.75rem;
+    transition: all .5s;
 }
 
 .h2-text {
@@ -244,7 +311,8 @@ section {
 .h3-tag,
 .img-tag {
     font-size: 1.25rem;
-    color: #FFFF;
+    color: #FFFFFF;
+    transition: all .5s;
 }
 
 .h3-text {
@@ -256,7 +324,8 @@ section {
 
 .p-tag,
 .a-tag {
-    color: #FFFF;
+    color: #FFFFFF;
+    transition: all .5s;
 }
 
 .p-text {
@@ -267,7 +336,12 @@ section {
 
 .div-tag {
     font-size: 1.5rem;
-    color: #FFFF;
+    color: #FFFFFF;
+    transition: all .5s;
+}
+
+.div-tag.active {
+    color: #000000
 }
 
 .a-tag {
@@ -286,6 +360,18 @@ section {
     margin-bottom: 0;
 }
 
+.swiper-3d .swiper-cube-shadow,
+.swiper-3d .swiper-slide,
+.swiper-3d .swiper-slide-shadow,
+.swiper-3d .swiper-slide-shadow-bottom,
+.swiper-3d .swiper-slide-shadow-left,
+.swiper-3d .swiper-slide-shadow-right,
+.swiper-3d .swiper-slide-shadow-top,
+.swiper-3d .swiper-wrapper {
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+}
+
 /*------------------- ヘッダーＰＣサイズ -----------------------*/
 
 header {
@@ -293,16 +379,20 @@ header {
     flex-direction: column;
     justify-content: center;
     height: 700px;
+    height: calc(100vh - 25px);
     padding: 10px 20px;
 }
 
-.title {
+header .title {
     display: flex;
     font-size: 3rem;
     justify-content: center;
     align-items: center;
-    color: #FFFF;
     margin: auto;
+}
+
+[data-aos^=fade][data-aos].title {
+    transition-duration: 4s;
 }
 
 .title_h1_text {
@@ -320,8 +410,9 @@ header {
 }
 
 .title_h1_tag {
+    color: #FFFFFF;
     font-size: 2.5rem;
-
+    transition: all .5s;
 }
 
 @media screen and (max-width: 900px) {
@@ -338,6 +429,7 @@ header {
 
 main {
     padding: 0 20px;
+    overflow: hidden;
 }
 
 .main-close {
@@ -392,7 +484,6 @@ main {
 .div-tag-bottom {
     position: absolute;
     top: -22px;
-
 }
 
 .div-tag-bottom {
@@ -443,36 +534,32 @@ main {
     margin: 0 8px;
     transition: all .5s;
     filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.3)) drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.6));
+    opacity: 1;
 }
 
 .swiper-pagination-bullet:nth-child(1) {
     background-color: #E44D26;
-    opacity: 1;
 }
 
 .swiper-pagination-bullet:nth-child(2) {
     background-color: #264DE4;
-    opacity: 1;
 }
 
 .swiper-pagination-bullet:nth-child(3) {
     background-color: #F7DF1E;
-    opacity: 1;
 }
 
 .swiper-pagination-bullet:nth-child(4) {
     background-color: #464342;
-    opacity: 1;
 }
 
 .swiper-pagination-bullet:nth-child(5) {
     background-color: #FFFFFF;
-    opacity: 1;
 }
 
 .swiper-pagination-bullet-active {
     transform: scale(1.2);
-    transition: all .5s;
+    transition: all .5s 0s ease;
 }
 
 .tag-button,
@@ -481,16 +568,15 @@ main {
     left: calc(50% + -231px);
     bottom: -10px;
     font-size: 1.25rem;
-    color: #FFFF;
+    color: #FFFFFF;
+    transition: all .5s 0s ease;
 }
 
 .tag-button2 {
     left: calc(50% + 133px);
-
 }
 
 .swiper-img-text {
-    bottom: 0;
     font-size: 1.5rem;
     padding-top: 10px;
     text-align: center;
@@ -530,10 +616,121 @@ main {
     aspect-ratio: 400/200;
     margin: 5px 0 10px;
     box-shadow: 0px 3px 3px 0px #000000;
+    cursor: pointer;
 }
 
 .website-box-wrapper:first-child {
     margin-right: 20px;
+}
+
+/*サイト詳細のモーダルウィンドウ*/
+
+.website-modal-container {
+    position: fixed;
+    inset: 0;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    padding: 20px;
+    background-color: rgb(0, 0, 0, .3);
+    z-index: -10;
+    overflow-y: auto;
+    opacity: 0;
+}
+
+.website-modal-container.open {
+    opacity: 1;
+    z-index: 10;
+}
+
+.website-modal-container.open2 {
+    transition: all .5s;
+}
+
+.website-modal-box {
+    width: 100%;
+    max-width: 1000px;
+    padding: 40px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, .9);
+    margin: auto;
+}
+
+.website-modal_return-text {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: 0;
+    margin-bottom: 12px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.website-modal_title {
+    text-align: center;
+}
+
+.website-modal_subtitle {
+    margin-top: 60px;
+    margin-bottom: 30px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+.website-modal_subtitle p {
+    margin-top: 15px;
+    font-weight: normal;
+}
+
+.website-modal_textbox {
+    padding-left: 0;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 415px;
+}
+
+.website-modal_textbox p {
+    padding-left: 0;
+}
+
+.basic-textbox {
+    padding-left: 0;
+    margin-top: 20px;
+}
+
+.basic-strong {
+    text-align: center;
+    font-weight: bold;
+    color: #ff0000;
+}
+
+.basic-textbox ul {
+    margin-top: 10px;
+}
+
+.website-modal_button {
+    display: block;
+    width: 200px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    margin: 50px auto 26px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+    background-color: #FFFFFF;
+    border: 1px solid #000000;
+    filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.6));
+    transition: all .3s;
+}
+
+.website-modal_button:hover {
+    color: #FFFFFF;
+    background-color: #000000;
+    transition: all .3s;
 }
 
 /*------------------- 対応可能時間ＰＣサイズ -----------------------*/
