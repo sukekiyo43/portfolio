@@ -1,18 +1,28 @@
 
-let swiper = new Swiper("#swiper", {
-    effect: "coverflow",
+const swiper = new Swiper("#swiper", {
     // direction: "vertical",
+    effect: "coverflow",
     speed: '.8s',
     centeredSlides: true,
     loop: true,
     loopAdditionalSlides: 5,
     slidesPerView: 1.9,
-    spaceBetween: 0,
     pagination: {
         el: "#variations",
         clickable: true,
     },
+    // breakpoints: {
+    //     // 768px以上の場合スワイパーを横の動きに
+    //     768: {
+
+    //         // effect: "coverflow",
+    //         direction: "horizontal",
+
+    //     },
+    // },
 });
+
+
 
 swiper.on("slideChange", function () {
     if (swiper.activeIndex == 5 || swiper.activeIndex == 10) {
@@ -100,4 +110,6 @@ swiper.on("slideChange", function () {
         });
     };
 });
+
+
 
