@@ -9,7 +9,6 @@ let diff = 0;
 
 // モーダルウィンドウ開
 ninja.addEventListener('click', function () {
-    body0.classList.toggle('open');
     // スクロールバーの長さ計算
     clientWidth = body0.clientWidth;
     noScrollBarWidth = body.clientWidth;
@@ -22,6 +21,8 @@ ninja.addEventListener('click', function () {
     window.setTimeout(function () {
         ninja_modal.classList.remove('open2');
     }, 300);
+    body0.classList.toggle('open');
+
 });
 
 // モーダルウィンドウ閉

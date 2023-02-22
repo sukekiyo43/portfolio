@@ -148,8 +148,7 @@ table {
 
 #body {
     position: relative;
-    width: 100vw;
-    height: 100%;
+    width: 100%;
     font-size: 16px;
     font-family: 'メイリオ', ' Meiryo', sans-serif;
     opacity: 0;
@@ -622,6 +621,16 @@ main {
     margin: 5px 0 10px;
     box-shadow: 0px 3px 3px 0px #000000;
     cursor: pointer;
+    overflow: hidden;
+}
+
+.website-box-img img {
+    transition: all .3s;
+}
+
+.website-box-img img:hover {
+    transition: all .3s;
+    filter: blur(3px) brightness(130%);
 }
 
 .website-box-wrapper:first-child {
