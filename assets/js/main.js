@@ -14,7 +14,6 @@ back_button.addEventListener('click', function () {
     body0.classList.toggle('open');
 });
 
-
 // 世界七不思議モーダルウィンドウ
 // モーダルウィンドウ開
 Seven_Wonders.addEventListener('click', function () {
@@ -38,6 +37,19 @@ yamato.addEventListener('click', function () {
 // モーダルウィンドウ閉
 back_button3.addEventListener('click', function () {
     yamato_modal.classList.toggle('open');
+    body0.classList.toggle('open');
+});
+
+// S.Lips モーダルウィンドウ
+// モーダルウィンドウ開
+lips.addEventListener('click', function () {
+    lips_modal.classList.toggle('open');
+    body0.classList.toggle('open');
+});
+
+// モーダルウィンドウ閉
+back_button4.addEventListener('click', function () {
+    lips_modal.classList.toggle('open');
     body0.classList.toggle('open');
 });
 
