@@ -1,16 +1,16 @@
 
 /// モーダルウィンドウ制御 ///
 
-// ギャラリーサイトモーダルウィンドウ
+// 小児クリニックモーダルウィンドウ
 // モーダルウィンドウ開
-ninja.addEventListener('click', function () {
-    ninja_modal.classList.toggle('open');
+syouni.addEventListener('click', function () {
+    syouni_modal.classList.toggle('open');
     body0.classList.toggle('open');
 });
 
 // モーダルウィンドウ閉
 back_button.addEventListener('click', function () {
-    ninja_modal.classList.toggle('open');
+    syouni_modal.classList.toggle('open');
     body0.classList.toggle('open');
 });
 
