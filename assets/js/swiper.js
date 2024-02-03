@@ -11,18 +11,7 @@ const swiper = new Swiper("#swiper", {
         el: "#variations",
         clickable: true,
     },
-    // breakpoints: {
-    //     // 768px以上の場合スワイパーを横の動きに
-    //     768: {
-
-    //         // effect: "coverflow",
-    //         direction: "horizontal",
-
-    //     },
-    // },
 });
-
-
 
 swiper.on("slideChange", function () {
     if (swiper.activeIndex == 5 || swiper.activeIndex == 10) {
@@ -95,19 +84,9 @@ swiper.on("slideChange", function () {
         window.setTimeout(function () {
             body.classList.remove("active");
         }, 500);
-
-        let elements = document.querySelectorAll('.title_h1_tag,.tag-1, .h2-tag, .h3-tag, .img-tag, .p-tag, .a-tag, .div-tag, .tag-button,.tag-button2');
-        elements.forEach(function (text_lightgray) {
-            text_lightgray.style.color = '#CCCCCC';
-        });
     } else {
         bg1.classList.remove("active-g");
         bg2.classList.remove("active-g");
-
-        let elements = document.querySelectorAll('.title_h1_tag,.tag-1, .h2-tag, .h3-tag, .img-tag, .p-tag, .a-tag, .div-tag, .tag-button,.tag-button2');
-        elements.forEach(function (text_white) {
-            text_white.style.color = '#FFFFFF';
-        });
     };
 });
 
