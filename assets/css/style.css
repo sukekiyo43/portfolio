@@ -664,7 +664,7 @@ main {
     background-size: 200%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: textGradient1 12s infinite;
+    animation: textGradient1 12s -8s infinite;
 }
 
 @keyframes textGradient1 {
