@@ -1684,7 +1684,7 @@ footer .tag-body {
         background-size: 300% 300%;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        animation: textGradient2 10s infinite;
+        animation: textGradient2 10s -7s infinite;
     }
 
     @keyframes textGradient2 {
