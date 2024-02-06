@@ -597,7 +597,7 @@ main {
     flex-direction: column;
     width: 100%;
     height: calc(100dvh - 195px);
-    min-height: 330px;
+    min-height: 525px;
     margin-top: 10px;
 }
 
@@ -661,7 +661,7 @@ main {
             rgba(133, 38, 228, 1) 90%,
             rgba(228, 77, 38, 1) 100%,
             rgba(228, 77, 38, 1) 100%);
-    background-size: 200%;
+    background-size: 200% 200%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: textGradient1 12s -8s infinite;
@@ -688,7 +688,7 @@ main {
 
     100% {
         opacity: 0;
-        background-position: 0% 0;
+        background-position: 0% 100%;
     }
 }
 
@@ -1419,10 +1419,6 @@ footer .tag-body {
 
     /*------------------- 全体の設定SP -----------------------*/
 
-    body.open {
-        overflow: hidden;
-    }
-
     #bg1 {
         background-image: url(../img/background-sp1.svg);
     }
@@ -1486,10 +1482,7 @@ footer .tag-body {
     /*------------------- ヘッダーSP -----------------------*/
 
     header {
-        padding: 21px 10px 0;
-        position: absolute;
-        left: 0;
-        z-index: 30;
+        padding: 21px 10px 5px;
     }
 
     #body.open header {
@@ -1504,12 +1497,6 @@ footer .tag-body {
         opacity: 0;
     }
 
-
-    #body.open .menu-box {
-        overflow: initial;
-        z-index: 20;
-    }
-
     #body.open .logo {
         position: relative;
         z-index: 30;
@@ -1520,23 +1507,22 @@ footer .tag-body {
     }
 
     .menu {
-        position: fixed;
+        position: absolute;
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 100vw;
-        height: 100vh;
-        top: -52px;
+        top: -47px;
         left: -10px;
-        padding-top: 180px;
-        min-height: 500px;
+        padding-top: 150px;
+        min-height: 550px;
         visibility: hidden;
         opacity: 0;
         transition: .3s;
     }
 
     #body.open .menu {
-        padding-top: 230px;
+        padding-top: 180px;
         visibility: visible;
         opacity: 1;
         z-index: 10;
@@ -1630,7 +1616,7 @@ footer .tag-body {
 
     .main {
         max-width: 692px;
-        padding: 150px 10px 0;
+        padding: 0 10px;
         margin: 0 auto;
     }
 
@@ -1642,7 +1628,8 @@ footer .tag-body {
 
     .mv {
         margin-top: 5px;
-        height: calc(100vh - 175px);
+        height: calc(100vh - 173px);
+        min-height: 465px;
     }
 
     .mv .tag-1 {
@@ -1904,12 +1891,8 @@ footer .tag-body {
 
     /*------------------- メインビジュアルＳＰサイズ -----------------------*/
 
-    .main {
-        padding: 145px 10px 0;
-    }
-
     .mv {
-        height: calc(100dvh - 165px);
+        height: calc(100vh - 167px);
     }
 
     /*------------------- 自己紹介ＳＰサイズ -----------------------*/
